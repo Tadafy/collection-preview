@@ -1,0 +1,53 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__out-0160 {
+  color: #ff5757;
+  text-align: center;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  flex: none;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.out-0160__corner {
+  border-top: 5px solid #ff5757;
+  border-right: 5px solid #ff5757;
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.out-0160__corner.bott-r {
+  border-width: 0 0 5px 5px;
+  border-bottom-style: solid;
+  border-bottom-color: #ff5757;
+  border-left-style: solid;
+  border-left-color: #ff5757;
+  border-right-style: solid;
+  border-right-color: #ff5757;
+  inset: auto auto 0 0;
+}
+
+.out-0160__label {
+  padding: 100px 40px;
+}
