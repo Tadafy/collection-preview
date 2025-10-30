@@ -1,0 +1,74 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__und-0715 {
+  color: #b39f82;
+  text-align: center;
+  letter-spacing: 3px;
+  flex-direction: row;
+  flex: none;
+  justify-content: flex-end;
+  align-self: center;
+  align-items: center;
+  font-family: Times New Roman, TimesNewRoman, Times, Baskerville, Georgia, serif;
+  font-size: 21px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.und-0715__wrap {
+  flex: none;
+  justify-content: space-between;
+  height: 50px;
+  display: flex;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.und-0715__wrap-2 {
+  border-radius: 50px;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  transform: translate(0);
+}
+
+.und-0715__fill--1 {
+  background-color: #b39f82;
+  height: 50%;
+  position: absolute;
+  bottom: 0%;
+  left: -1%;
+  right: -1%;
+}
+
+.und-0715__fill--2 {
+  background-color: #859bad;
+  height: 50%;
+  position: absolute;
+  top: 0%;
+  left: -1%;
+  right: -1%;
+}
+
+.und-0715__label {
+  margin-right: -2px;
+  padding-bottom: 70px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}

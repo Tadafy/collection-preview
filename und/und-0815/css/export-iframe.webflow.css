@@ -1,0 +1,51 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__und-0815 {
+  color: #fafafa;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  flex: none;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.und-0815__wrap {
+  position: absolute;
+  inset: 0%;
+}
+
+.und-0815__line {
+  background-image: linear-gradient(to right, #dcfc35, #35c0fc);
+  height: 20px;
+  margin-left: -2px;
+  margin-right: -2px;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  transform: translate(0, 50%);
+}
+
+.und-0815__label {
+  padding: 20px;
+  position: relative;
+}
