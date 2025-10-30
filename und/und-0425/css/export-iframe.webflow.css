@@ -1,0 +1,69 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__und-0425 {
+  color: #ffffffe6;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  flex-direction: row;
+  flex: none;
+  justify-content: flex-end;
+  align-self: center;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.und-0425__wrap {
+  flex: none;
+  height: 7px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.und-0425__line--2 {
+  filter: blur(1px);
+  background-color: #cbf6ff;
+  border-radius: 1px;
+  width: 47%;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  box-shadow: 0 0 13px 4px #00d4ff;
+}
+
+.und-0425__line--1 {
+  filter: blur(1px);
+  background-color: #ffd8e2;
+  border-radius: 1px;
+  width: 47%;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  box-shadow: 0 0 18px 2px #ff00404d, 0 0 13px 4px #ff0040;
+}
+
+.und-0425__label {
+  padding-top: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+  position: relative;
+}
