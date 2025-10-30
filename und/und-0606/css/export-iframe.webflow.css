@@ -1,0 +1,69 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__und-0606 {
+  color: #333;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  flex-direction: row;
+  flex: none;
+  justify-content: flex-end;
+  align-self: center;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.und-0606__wrap {
+  flex-direction: column;
+  flex: none;
+  justify-content: space-around;
+  display: block;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.und-0606__line--1 {
+  transform-origin: 0%;
+  background-color: #00c81e;
+  flex: none;
+  height: 3px;
+  transform: rotate(-4deg);
+}
+
+.und-0606__line--2 {
+  transform-origin: 100%;
+  background-color: #00c81e;
+  flex: none;
+  height: 3px;
+  margin-top: -3px;
+  transform: rotate(-4deg);
+}
+
+.und-0606__label {
+  transform-origin: 0%;
+  margin-right: -2px;
+  padding-bottom: 15px;
+  position: relative;
+  transform: skew(-4deg)rotate(-4deg);
+}
+
+.und-0606__span {
+  font-weight: 300;
+}
