@@ -1,0 +1,41 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__und-0155 {
+  color: #004cff;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  flex: none;
+  align-self: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.und-0155__line {
+  transform-origin: 50% 100%;
+  background-color: #004cff;
+  height: 5px;
+  position: absolute;
+  bottom: 0%;
+  left: -1%;
+  right: -1%;
+}
+
+.und-0155__label {
+  padding-bottom: 15px;
+}
