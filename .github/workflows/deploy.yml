@@ -3,24 +3,24 @@ name: Deploy to Cloudflare Pages
 on:
   push:
     branches:
-      - main
+      - main   # ob vsakem pushu na glavno vejo
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout repository
+      # 1️⃣ Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Setup Node.js
+      # 2️⃣ Setup Node.js (za generate-index.js)
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      # 3️⃣ Generate index files
+      # 3️⃣ Run index generator (iz mape _system/)
       - name: Generate index.html
         run: node ./_system/generate-index.js
 
@@ -30,26 +30,44 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: preview-tadafy
-          directory: .
+          projectName: preview-tadafy   # Deploy na preview.tadafy.com
+          directory: .                  # root folder
           branch: main
 
-      # 5️⃣ Detect changed folders (categories/components)
-      - name: Get changed folders
+      # 5️⃣ Najdi spremenjene mape (komponente)
+      - name: Get changed component folders
         id: folders
         run: |
           git fetch origin main
-          # poišči vse spremenjene mape (npr. und/und-0420/)
-          CHANGED=$(git diff --name-only HEAD~1 HEAD | grep -E '^([a-z]{3,4})/[a-z]{3,4}-[0-9]{4}' | sed 's|/.*||' | uniq | sed 's|^|https://preview.tadafy.com/|' | jq -R -s -c 'split("\n")[:-1]')
-          echo "changed=$CHANGED" >> $GITHUB_OUTPUT
+          CHANGED_FOLDERS=$(git diff --name-only HEAD~1 HEAD | grep -E '^([a-z]{3,4})/[a-z]{3,4}-[0-9]{4}' | sed 's|/.*||' | uniq)
+          echo "Spremenjene mape:"
+          echo "$CHANGED_FOLDERS"
+          echo "folders=$CHANGED_FOLDERS" >> $GITHUB_OUTPUT
 
-      # 6️⃣ Purge only changed component folders from Cloudflare cache
-      - name: Purge updated component folders
-        if: steps.folders.outputs.changed != '[]'
+      # 6️⃣ Purge vse datoteke znotraj spremenjenih map
+      - name: Purge updated component files from Cloudflare cache
+        if: steps.folders.outputs.folders != ''
         run: |
-          echo "Purging changed component folders from Cloudflare cache..."
-          echo ${{ steps.folders.outputs.changed }}
+          echo "Začenjam purge za mape:"
+          echo "${{ steps.folders.outputs.folders }}"
+
+          # Sestavi seznam vseh relevantnih datotek (HTML, JS, CSS, slike)
+          FILES=$(for folder in ${{ steps.folders.outputs.folders }}; do
+            echo "https://preview.tadafy.com/$folder/index.html"
+            echo "https://preview.tadafy.com/$folder/js/webflow.js"
+            echo "https://preview.tadafy.com/$folder/css/webflow.css"
+            echo "https://preview.tadafy.com/$folder/css/normalize.css"
+            echo "https://preview.tadafy.com/$folder/css/export-iframe.webflow.css"
+            # Dodaj slike (če obstajajo)
+            for img in $(find $folder/images -type f 2>/dev/null); do
+              echo "https://preview.tadafy.com/$img"
+            done
+          done | jq -R -s -c 'split("\n")[:-1]')
+
+          echo "Purging naslednje datoteke:"
+          echo $FILES
+
           curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
           -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
           -H "Content-Type: application/json" \
-          --data "{\"prefixes\": ${{ steps.folders.outputs.changed }}}"
+          --data "{\"files\": $FILES}"
