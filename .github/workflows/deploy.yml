@@ -30,8 +30,8 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: preview-tadafy   # Deploy na preview.tadafy.com
-          directory: .                  # root folder
+          projectName: preview-tadafy
+          directory: .
           branch: main
 
       # 5️⃣ Najdi spremenjene mape (komponente)
@@ -44,7 +44,7 @@ jobs:
           echo "$CHANGED_FOLDERS"
           echo "folders=$CHANGED_FOLDERS" >> $GITHUB_OUTPUT
 
-      # 6️⃣ Purge vse datoteke znotraj spremenjenih map
+      # 6️⃣ Purge vse datoteke znotraj spremenjenih map (by file)
       - name: Purge updated component files from Cloudflare cache
         if: steps.folders.outputs.folders != ''
         run: |
@@ -58,7 +58,6 @@ jobs:
             echo "https://preview.tadafy.com/$folder/css/webflow.css"
             echo "https://preview.tadafy.com/$folder/css/normalize.css"
             echo "https://preview.tadafy.com/$folder/css/export-iframe.webflow.css"
-            # Dodaj slike (če obstajajo)
             for img in $(find $folder/images -type f 2>/dev/null); do
               echo "https://preview.tadafy.com/$img"
             done
