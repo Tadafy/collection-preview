@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout repo
+      # 1️⃣ Checkout repozitorij
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -20,11 +20,21 @@ jobs:
         with:
           node-version: '20'
 
-      # 3️⃣ Run index generator (iz mape _system/)
-      - name: Generate index.html
-        run: node ./_system/generate-index.js
+      # 3️⃣ Počisti stare build mape (če obstajajo)
+      - name: Clean previous build artifacts
+        run: |
+          echo "🧹 Removing old component folders..."
+          rm -rf ./ico ./out ./tgl ./und ./fill ./btn ./tgl ./misc || true
+          echo "✅ Cleanup done."
 
-      # 4️⃣ Deploy to Cloudflare Pages
+      # 4️⃣ Zaženi generator index datotek
+      - name: Generate index.html
+        run: |
+          echo "⚙️ Generating new index files..."
+          node ./_system/generate-index.js
+          echo "✅ Index files generated."
+
+      # 5️⃣ Deploy na Cloudflare Pages
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
@@ -33,22 +43,3 @@ jobs:
           projectName: preview-tadafy   # Deploy na preview.tadafy.com
           directory: .                  # root folder
           branch: main
-
-      # 5️⃣ Pridobi seznam spremenjenih datotek (HTML, JS, CSS)
-      - name: Get changed files
-        id: changes
-        run: |
-          git fetch origin main
-          CHANGED=$(git diff --name-only HEAD~1 HEAD | grep -E '\.(html|js|css)$' | sed 's|^|https://preview.tadafy.com/|' | jq -R -s -c 'split("\n")[:-1]')
-          echo "changed=$CHANGED" >> $GITHUB_OUTPUT
-
-      # 6️⃣ Purge samo spremenjene datoteke iz Cloudflare cache
-      - name: Purge updated files from Cloudflare cache
-        if: steps.changes.outputs.changed != '[]'
-        run: |
-          echo "Purging changed files from Cloudflare cache..."
-          echo ${{ steps.changes.outputs.changed }}
-          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
-          -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
-          -H "Content-Type: application/json" \
-          --data "{\"files\": ${{ steps.changes.outputs.changed }}}"
