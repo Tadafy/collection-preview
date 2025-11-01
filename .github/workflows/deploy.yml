@@ -10,31 +10,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout repozitorij
+      # 1. Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Setup Node.js (za generate-index.js)
+      # 2. Setup Node.js (za generate-index.js)
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      # 3️⃣ Počisti stare build mape (če obstajajo)
-      - name: Clean previous build artifacts
-        run: |
-          echo "🧹 Removing old component folders..."
-          rm -rf ./ico ./out ./tgl ./und ./fill ./btn ./tgl ./misc || true
-          echo "✅ Cleanup done."
-
-      # 4️⃣ Zaženi generator index datotek
+      # 3. Run index generator (iz mape _system/)
       - name: Generate index.html
-        run: |
-          echo "⚙️ Generating new index files..."
-          node ./_system/generate-index.js
-          echo "✅ Index files generated."
+        run: node ./_system/generate-index.js
 
-      # 5️⃣ Deploy na Cloudflare Pages
+      # 4. Deploy to Cloudflare Pages
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
@@ -43,3 +33,8 @@ jobs:
           projectName: preview-tadafy   # Deploy na preview.tadafy.com
           directory: .                  # root folder
           branch: main
+
+      # 5. Purge Cloudflare cache
+      - name: Purge Cloudflare Cache
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache"             -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}"             -H "Content-Type: application/json"             --data '{"purge_everything":true}'
