@@ -10,7 +10,7 @@ body {
 }
 
 .tadafy__und-0155 {
-  color: #004cff;
+  color: #fff;
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -28,7 +28,7 @@ body {
 
 .und-0155__line {
   transform-origin: 50% 100%;
-  background-color: #004cff;
+  background-color: #fff;
   height: 5px;
   position: absolute;
   bottom: 0%;
