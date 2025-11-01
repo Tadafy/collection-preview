@@ -3,38 +3,53 @@ name: Deploy to Cloudflare Pages
 on:
   push:
     branches:
-      - main   # ob vsakem pushu na glavno vejo
+      - main
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repo
+      # 1️⃣ Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Setup Node.js (za generate-index.js)
+      # 2️⃣ Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      # 3. Run index generator (iz mape _system/)
+      # 3️⃣ Generate index files
       - name: Generate index.html
         run: node ./_system/generate-index.js
 
-      # 4. Deploy to Cloudflare Pages
+      # 4️⃣ Deploy to Cloudflare Pages
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: preview-tadafy   # Deploy na preview.tadafy.com
-          directory: .                  # root folder
+          projectName: preview-tadafy
+          directory: .
           branch: main
 
-      # 5. Purge Cloudflare cache
-      - name: Purge Cloudflare Cache
+      # 5️⃣ Detect changed folders (categories/components)
+      - name: Get changed folders
+        id: folders
         run: |
-          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache"             -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}"             -H "Content-Type: application/json"             --data '{"purge_everything":true}'
+          git fetch origin main
+          # poišči vse spremenjene mape (npr. und/und-0420/)
+          CHANGED=$(git diff --name-only HEAD~1 HEAD | grep -E '^([a-z]{3,4})/[a-z]{3,4}-[0-9]{4}' | sed 's|/.*||' | uniq | sed 's|^|https://preview.tadafy.com/|' | jq -R -s -c 'split("\n")[:-1]')
+          echo "changed=$CHANGED" >> $GITHUB_OUTPUT
+
+      # 6️⃣ Purge only changed component folders from Cloudflare cache
+      - name: Purge updated component folders
+        if: steps.folders.outputs.changed != '[]'
+        run: |
+          echo "Purging changed component folders from Cloudflare cache..."
+          echo ${{ steps.folders.outputs.changed }}
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+          -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+          -H "Content-Type: application/json" \
+          --data "{\"prefixes\": ${{ steps.folders.outputs.changed }}}"
