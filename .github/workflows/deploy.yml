@@ -20,53 +20,46 @@ jobs:
         with:
           node-version: '20'
 
-      # 3️⃣ Run index generator (iz mape _system/)
+      # 3️⃣ Zaženi generator index datotek
       - name: Generate index.html
         run: node ./_system/generate-index.js
 
-      # 4️⃣ Deploy to Cloudflare Pages
+      # 4️⃣ Deploy na Cloudflare Pages
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: preview-tadafy
-          directory: .
+          projectName: preview-tadafy   # Deploy na preview.tadafy.com
+          directory: .                  # root folder
           branch: main
 
-      # 5️⃣ Najdi spremenjene mape (komponente)
+      # 5️⃣ Poišči mape komponent, ki so se spremenile v zadnjem commitu
       - name: Get changed component folders
         id: folders
         run: |
           git fetch origin main
           CHANGED_FOLDERS=$(git diff --name-only HEAD~1 HEAD | grep -E '^([a-z]{3,4})/[a-z]{3,4}-[0-9]{4}' | sed 's|/.*||' | uniq)
-          echo "Spremenjene mape:"
+          echo "📁 Spremenjene mape:"
           echo "$CHANGED_FOLDERS"
           echo "folders=$CHANGED_FOLDERS" >> $GITHUB_OUTPUT
 
-      # 6️⃣ Purge vse datoteke znotraj spremenjenih map (by file)
-      - name: Purge updated component files from Cloudflare cache
+      # 6️⃣ Pošlji Prefix purge samo za spremenjene mape
+      - name: Purge updated component folders from Cloudflare cache
         if: steps.folders.outputs.folders != ''
         run: |
-          echo "Začenjam purge za mape:"
-          echo "${{ steps.folders.outputs.folders }}"
-
-          # Sestavi seznam vseh relevantnih datotek (HTML, JS, CSS, slike)
-          FILES=$(for folder in ${{ steps.folders.outputs.folders }}; do
-            echo "https://preview.tadafy.com/$folder/index.html"
-            echo "https://preview.tadafy.com/$folder/js/webflow.js"
-            echo "https://preview.tadafy.com/$folder/css/webflow.css"
-            echo "https://preview.tadafy.com/$folder/css/normalize.css"
-            echo "https://preview.tadafy.com/$folder/css/export-iframe.webflow.css"
-            for img in $(find $folder/images -type f 2>/dev/null); do
-              echo "https://preview.tadafy.com/$img"
-            done
+          echo "🚀 Začenjam Cloudflare Prefix Purge..."
+          PREFIXES=$(for folder in ${{ steps.folders.outputs.folders }}; do
+            echo "preview.tadafy.com/$folder"
           done | jq -R -s -c 'split("\n")[:-1]')
+          
+          echo "🧹 Čiščenje prefixov:"
+          echo $PREFIXES
 
-          echo "Purging naslednje datoteke:"
-          echo $FILES
+          RESPONSE=$(curl -s -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data "{\"prefixes\": $PREFIXES}")
 
-          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
-          -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
-          -H "Content-Type: application/json" \
-          --data "{\"files\": $FILES}"
+          echo "✅ Cloudflare response:"
+          echo $RESPONSE
