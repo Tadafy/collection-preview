@@ -3,63 +3,65 @@ name: Deploy to Cloudflare Pages
 on:
   push:
     branches:
-      - main   # ob vsakem pushu na glavno vejo
+      - main
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout repo
+      # 1️⃣ Checkout
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Setup Node.js (za generate-index.js)
+      # 2️⃣ Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      # 3️⃣ Zaženi generator index datotek
+      # 3️⃣ Generate index files
       - name: Generate index.html
         run: node ./_system/generate-index.js
 
-      # 4️⃣ Deploy na Cloudflare Pages
+      # 4️⃣ Deploy to Cloudflare Pages
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: preview-tadafy   # Deploy na preview.tadafy.com
-          directory: .                  # root folder
+          projectName: preview-tadafy
+          directory: .
           branch: main
 
-      # 5️⃣ Poišči mape komponent, ki so se spremenile v zadnjem commitu
+      # 5️⃣ Detect changed component folders
       - name: Get changed component folders
         id: folders
         run: |
           git fetch origin main
           CHANGED_FOLDERS=$(git diff --name-only HEAD~1 HEAD | grep -E '^([a-z]{3,4})/[a-z]{3,4}-[0-9]{4}' | sed 's|/.*||' | uniq)
-          echo "📁 Spremenjene mape:"
+          echo "📁 Changed folders:"
           echo "$CHANGED_FOLDERS"
           echo "folders=$CHANGED_FOLDERS" >> $GITHUB_OUTPUT
 
-      # 6️⃣ Pošlji Prefix purge samo za spremenjene mape
-      - name: Purge updated component folders from Cloudflare cache
+      # 6️⃣ Purge all files in those folders (HTML, JS, CSS, images)
+      - name: Purge updated component files
         if: steps.folders.outputs.folders != ''
         run: |
-          echo "🚀 Začenjam Cloudflare Prefix Purge..."
-          PREFIXES=$(for folder in ${{ steps.folders.outputs.folders }}; do
-            echo "preview.tadafy.com/$folder"
+          echo "🚀 Starting Cloudflare file purge..."
+          FILES=$(for folder in ${{ steps.folders.outputs.folders }}; do
+            echo "https://preview.tadafy.com/$folder/index.html"
+            for f in $(find $folder -type f \( -name "*.css" -o -name "*.js" -o -name "*.svg" -o -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.webp" \) 2>/dev/null); do
+              echo "https://preview.tadafy.com/$f"
+            done
           done | jq -R -s -c 'split("\n")[:-1]')
-          
-          echo "🧹 Čiščenje prefixov:"
-          echo $PREFIXES
+          echo "🧹 Purging files:"
+          echo $FILES
 
           RESPONSE=$(curl -s -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
             -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
             -H "Content-Type: application/json" \
-            --data "{\"prefixes\": $PREFIXES}")
+            --data "{\"files\": $FILES}")
 
           echo "✅ Cloudflare response:"
           echo $RESPONSE
