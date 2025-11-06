@@ -1,0 +1,61 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__out-0170 {
+  color: #2a3239;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  flex-direction: row;
+  flex: none;
+  justify-content: flex-end;
+  align-self: center;
+  align-items: center;
+  font-family: Inconsolata, monospace;
+  font-size: 13px;
+  line-height: 1.2;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.out-0170__col-w {
+  flex: none;
+  position: absolute;
+  inset: 0%;
+}
+
+.out-0170__col--1 {
+  border: 1px solid #000;
+  border-radius: 16px;
+  width: 100%;
+  margin-top: -8px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  position: absolute;
+  inset: 0;
+}
+
+.out-0170__col--2 {
+  border: 1px solid #000;
+  border-radius: 16px;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: -8px;
+  margin-left: -8px;
+  position: absolute;
+  inset: 0;
+}
+
+.out-0170__label {
+  padding: 5px 64px;
+  position: relative;
+}
