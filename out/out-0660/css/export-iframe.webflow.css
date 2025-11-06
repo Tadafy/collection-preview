@@ -1,0 +1,60 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__out-0660 {
+  color: #fafafa;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  flex-direction: row;
+  flex: none;
+  justify-content: flex-end;
+  align-self: center;
+  align-items: center;
+  font-family: Droid Serif, serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.out-0660__wrap {
+  flex: none;
+  position: absolute;
+  inset: 0%;
+}
+
+.out-0660__frame--1 {
+  border-top: 2px solid #fafafa;
+  border-bottom: 2px solid #fafafa;
+  width: 100%;
+  margin-top: 6px;
+  position: absolute;
+  inset: 0;
+  transform: skew(-15deg);
+}
+
+.out-0660__frame--2 {
+  border-top: 2px solid #fafafa;
+  border-bottom: 2px solid #fafafa;
+  width: 100%;
+  margin-bottom: 6px;
+  position: absolute;
+  inset: 0;
+  transform: skew(15deg);
+}
+
+.out-0660__label {
+  padding: 20px 30px;
+  position: relative;
+}
