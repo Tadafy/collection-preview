@@ -1,0 +1,61 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__out-0490 {
+  color: #2a3239;
+  text-align: center;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  flex-direction: row;
+  flex: none;
+  justify-content: flex-end;
+  align-self: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  transform: translate(0);
+}
+
+.out-0490__wrap {
+  flex: none;
+  position: absolute;
+  inset: 0%;
+}
+
+.out-0490__line--1 {
+  transform-origin: 0 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  position: absolute;
+  inset: 0% 10% 0% 0%;
+  transform: skew(0deg, -6deg);
+}
+
+.out-0490__line--2 {
+  transform-origin: 100% 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  position: absolute;
+  inset: 0% 0% 0% 10%;
+  transform: skew(0deg, -6deg);
+}
+
+.out-0490__label {
+  padding: 25px 50px;
+  position: relative;
+}
