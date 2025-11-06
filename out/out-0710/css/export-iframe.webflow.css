@@ -1,0 +1,74 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.out-0710__line--2 {
+  border-top: 1px solid #01f59d;
+  position: absolute;
+  inset: 0 0 1px;
+  overflow: hidden;
+}
+
+.out-0710__line--2.lev--2 {
+  top: -1px;
+  bottom: 50%;
+}
+
+.out-0710__line--2.lev--3 {
+  top: -1px;
+}
+
+.out-0710__label {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.tadafy__out-0710 {
+  color: #fffc;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  flex: none;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.out-0710__wrap {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  position: absolute;
+  inset: 0%;
+}
+
+.out-0710__line--1 {
+  border-bottom: 1px solid #01f59d;
+  position: absolute;
+  inset: 1px 0 0;
+  overflow: hidden;
+}
+
+.out-0710__line--1.lev--3 {
+  bottom: -1px;
+}
+
+.out-0710__line--1.lev--2 {
+  top: 50%;
+  bottom: -1px;
+}
