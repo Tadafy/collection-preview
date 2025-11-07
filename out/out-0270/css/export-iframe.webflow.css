@@ -1,0 +1,66 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__out-0270 {
+  color: #fafafa;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  flex: none;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.out-0270__wrap {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+}
+
+.out-0270__slice {
+  border: 1px solid #fafafa;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0%;
+  transform: rotate(30deg);
+}
+
+.out-0270__fill {
+  border: 1px solid #fafafa;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0%;
+}
+
+.out-0270__label {
+  padding-left: 32px;
+  padding-right: 32px;
+  position: relative;
+}
+
+.out-0270__label-w {
+  aspect-ratio: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}

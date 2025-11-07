@@ -1,0 +1,74 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__out-0275 {
+  color: #2a3239;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  flex: none;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.out-0275__wrap {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+}
+
+.out-0275__segm {
+  border: 1px solid #00e66d;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0%;
+  transform: rotate(22.5deg);
+}
+
+.out-0275__segm.lev-02 {
+  margin: -1px;
+}
+
+.out-0275__segm.lev-02.lev-03 {
+  display: block;
+}
+
+.out-0275__fill {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0%;
+}
+
+.out-0275__label {
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+}
+
+.out-0275__label-w {
+  aspect-ratio: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
