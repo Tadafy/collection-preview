@@ -8,3 +8,20 @@ body {
   display: flex;
   overflow: hidden;
 }
+
+.tadafy__emp-0125 {
+  color: #fafafa;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #2a3239;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  display: flex;
+}
