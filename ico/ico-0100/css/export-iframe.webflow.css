@@ -9,9 +9,9 @@ body {
   overflow: hidden;
 }
 
-.btn__ico-0100 {
+.tadafy__ico-0100 {
   z-index: 10;
-  color: #000;
+  color: #dbdbe0;
   text-align: center;
   letter-spacing: 1px;
   border-radius: 40px;
@@ -37,7 +37,7 @@ body {
 }
 
 .ico-0100__icon-w {
-  background-color: #2a3239;
+  background-color: #202128;
   border-radius: 50%;
   flex: none;
   justify-content: center;
@@ -51,6 +51,7 @@ body {
 }
 
 .ico-0100__icon {
+  opacity: .85;
   filter: invert();
   width: 37px;
   position: relative;
@@ -59,7 +60,7 @@ body {
 }
 
 .ico-0100__frame {
-  border: 3px solid #2a3239;
+  border: 3px solid #202128;
   border-radius: 40px;
   position: absolute;
   inset: 0%;
