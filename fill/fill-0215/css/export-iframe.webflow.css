@@ -1,0 +1,52 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__fill-0215 {
+  color: #2a3239;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  flex: none;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.fill-0215__fill-t {
+  backface-visibility: hidden;
+  transform-origin: 100% 100%;
+  background-color: #e8383c;
+  position: absolute;
+  inset: 0% 0% 50%;
+  transform: translate(-1px)skew(15deg);
+}
+
+.fill-0215__fill-b {
+  transform-origin: 100% 0;
+  background-color: #a41417;
+  position: absolute;
+  inset: 50% 0% 0%;
+  transform: translate(-1px)skew(-15deg);
+}
+
+.fill-0215__label {
+  mix-blend-mode: multiply;
+  padding: 11px 35px 11px 15px;
+  position: relative;
+}
