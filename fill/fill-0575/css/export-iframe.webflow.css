@@ -1,0 +1,65 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__fill-0575 {
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 50px;
+  flex-direction: row;
+  flex: none;
+  justify-content: flex-end;
+  align-self: center;
+  align-items: center;
+  font-family: Oswald, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transform: translate(0);
+  box-shadow: inset 4px 0 4px #ffffff4d, inset -4px 0 4px #ffffff4d, inset 1px 0 1px #fff9, inset -1px 0 1px #fff9;
+}
+
+.fill-0575__wrap {
+  border-radius: 50px;
+  margin: 7px;
+  position: absolute;
+  inset: 0%;
+  overflow: hidden;
+  transform: translate(0);
+}
+
+.fill-0575__fill {
+  background-image: linear-gradient(to right, #ffffff03 8%, #fff6 15%, #ffffffb3 36%, #ffffff03 40%, #ffffff6e 79%), linear-gradient(to right, #ffffff03 50%, #0000001a 75%), repeating-linear-gradient(135deg, #fafafa, #fafafa 3%, #001eff 3% 7%, #fff 7% 10%, red 10% 14%);
+  flex: 1;
+  width: 102%;
+  height: 550%;
+  position: absolute;
+  top: -1%;
+  bottom: 0%;
+  right: 0%;
+}
+
+.fill-0575__shad {
+  border-radius: 50px;
+  position: absolute;
+  inset: 0%;
+  box-shadow: inset -2px 0 6px #ffffffa3, inset 2px 0 5px #ffffff80;
+}
+
+.fill-0575__label {
+  text-shadow: 0 0 13px #ffffffad;
+  padding: 125px 15px;
+  position: relative;
+}
