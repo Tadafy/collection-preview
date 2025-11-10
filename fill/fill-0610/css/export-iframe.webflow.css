@@ -1,0 +1,64 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__fill-0610 {
+  color: #000;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 7px solid #000;
+  flex-direction: row;
+  flex: none;
+  justify-content: flex-end;
+  align-self: center;
+  align-items: center;
+  font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  transform: translate(0);
+}
+
+.fill-0610__wrap {
+  background-color: #000;
+  position: absolute;
+  inset: 0%;
+  overflow: hidden;
+}
+
+.fill-0610__grad {
+  background-image: repeating-linear-gradient(114deg, #ffffff03, #ffffff03 2%, #febc03 2% 4%);
+  flex: 1;
+  width: 263%;
+  height: 102%;
+  position: absolute;
+  top: -1%;
+  bottom: 0%;
+  right: -1%;
+  transform: translate(0);
+}
+
+.fill-0610__fill {
+  background-color: #febc03;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  position: absolute;
+  inset: 0%;
+}
+
+.fill-0610__label {
+  text-shadow: none;
+  padding: 35px;
+  position: relative;
+}
