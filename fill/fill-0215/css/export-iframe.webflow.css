@@ -47,6 +47,14 @@ body {
 
 .fill-0215__label {
   mix-blend-mode: multiply;
-  padding: 11px 35px 11px 15px;
+  padding: 11px 35px 11px 10px;
   position: relative;
 }
+
+@media screen and (max-width: 240px) {
+  .tadafy__fill-0215 {
+    transform: scale(.7);
+  }
+}
+
+

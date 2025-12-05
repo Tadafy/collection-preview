@@ -20,7 +20,7 @@ body {
   align-self: center;
   align-items: center;
   font-family: Montserrat, sans-serif;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 900;
   line-height: .9;
   text-decoration: none;
@@ -36,6 +36,14 @@ body {
 }
 
 .fill-0175__label {
-  padding: 0 65px 0 50px;
+  padding: 0 45px 0 20px;
   position: relative;
 }
+
+@media screen and (max-width: 240px) {
+  .tadafy__fill-0175 {
+    transform: scale(.7);
+  }
+}
+
+
