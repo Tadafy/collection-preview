@@ -1,0 +1,104 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 -50%;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__ico-0320 {
+  color: #fafafa;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  flex: none;
+  align-self: center;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: .9;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transform: translate(0);
+}
+
+.ico-0320__wrap {
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  display: flex;
+}
+
+.ico-0320__fill {
+  background-color: #001eff;
+  border-radius: 50px;
+  width: 100%;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  inset: 0%;
+  overflow: hidden;
+  transform: translate(0);
+}
+
+.ico-0320__circ {
+  background-color: #001eff;
+  border-radius: 0 50% 50% 0%;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+}
+
+.ico-0320__arrow {
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  width: 13px;
+  height: 13px;
+  margin: auto;
+  display: block;
+  position: absolute;
+  inset: 0%;
+  transform: rotate(-45deg);
+}
+
+.ico-0320__arrow--line {
+  transform-origin: 100% 100%;
+  background-color: #fff;
+  width: 3px;
+  height: 200%;
+  position: absolute;
+  inset: auto -1px 1px auto;
+  transform: rotate(-45deg);
+}
+
+.ico-0320__circ-bgr {
+  background-color: #001eff;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: -100%;
+}
+
+.ico-0320__label {
+  padding-left: 40px;
+  padding-right: 40px;
+  display: block;
+  position: relative;
+}
+
+@media screen and (max-width: 479px) {
+  .tadafy__ico-0320 {
+    transform: scale(.7)translate(0);
+  }
+}

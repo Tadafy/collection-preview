@@ -1,0 +1,88 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 -50%;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__ico-0495 {
+  color: #fff;
+  text-align: center;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  flex-direction: row;
+  flex: none;
+  align-self: center;
+  align-items: center;
+  font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.ico-0495__wrap {
+  align-items: center;
+  display: flex;
+}
+
+.ico-0495__ico-w {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  position: relative;
+}
+
+.ico-0495__ico {
+  filter: invert();
+  width: 31px;
+  position: relative;
+}
+
+.ico-0495__rotat {
+  border-radius: 50%;
+  position: absolute;
+  inset: 0%;
+}
+
+.ico-0495__ico-2-w {
+  z-index: 5;
+  background-color: #00e022;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 17px;
+  height: 17px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: -2px;
+}
+
+.ico-0495__ico-2 {
+  width: 10px;
+  position: relative;
+}
+
+.ico-0495__label {
+  padding-left: 20px;
+  position: relative;
+}
+
+@media screen and (max-width: 479px) {
+  .tadafy__ico-0495 {
+    transform: scale(.7);
+  }
+}
+
+

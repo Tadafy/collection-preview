@@ -1,0 +1,66 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 -50%;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__ico-0425 {
+  color: #33333380;
+  text-align: center;
+  background-color: #ededed;
+  border: 2px solid #2a32391a;
+  border-radius: 3px;
+  flex: none;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-family: Varela Round, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: all .15s;
+  display: inline-block;
+  position: relative;
+}
+
+.tadafy__ico-0425:hover {
+  border-color: #2760ff;
+}
+
+.ico-0425__label {
+  padding: 18px 25px;
+  position: relative;
+}
+
+.ico-0425_ico-w {
+  z-index: 5;
+  background-color: #2760ff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+}
+
+.ico-0425__ico {
+  width: 7px;
+  position: relative;
+}
+
+@media screen and (max-width: 479px) {
+  .tadafy__ico-0425 {
+    transform: scale(.7);
+  }
+}
+
+

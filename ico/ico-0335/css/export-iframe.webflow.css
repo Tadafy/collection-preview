@@ -1,0 +1,97 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 -50%;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__ico-0335 {
+  color: #fafafa;
+  text-align: center;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  flex: none;
+  align-self: center;
+  align-items: center;
+  font-family: Varela Round, sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: .9;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transform: translate(0);
+}
+
+.ico-0335__wrap {
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  display: flex;
+}
+
+.ico-0335__fill {
+  z-index: 10;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  inset: 0%;
+  overflow: hidden;
+  transform: translate(0);
+}
+
+.ico-0335__circ-w {
+  background-color: #0000;
+  border-radius: 50%;
+  width: 68px;
+  height: 68px;
+  margin: 4px;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+}
+
+.ico-0335__circ-bgr {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: -50%;
+}
+
+.ico-0335__circ {
+  border: 4px solid #0000;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+}
+
+.ico-0335__icon {
+  width: 29px;
+  position: relative;
+}
+
+.ico-0335__label {
+  padding-left: 40px;
+  padding-right: 68px;
+  display: block;
+  position: relative;
+}
+
+@media screen and (max-width: 479px) {
+  .tadafy__ico-0335 {
+    transform: scale(.7)translate(0);
+  }
+}
