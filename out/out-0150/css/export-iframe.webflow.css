@@ -5,6 +5,7 @@ body {
   height: 100vh;
   margin: 0 -50%;
   display: flex;
+  overflow: hidden;
 }
 
 .out-0150__line--t {

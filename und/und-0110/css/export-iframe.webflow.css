@@ -5,6 +5,7 @@ body {
   height: 100vh;
   margin: 0 -50%;
   display: flex;
+  overflow: hidden;
 }
 
 .btn__und-0110 {
