@@ -68,7 +68,7 @@ body {
   box-shadow: 0 0 20px #0000004d;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 240px) {
   .tadafy__ico-0645 {
     transform: scale(.7);
   }

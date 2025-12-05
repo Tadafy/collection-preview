@@ -63,7 +63,7 @@ body {
   right: -1px;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 240px) {
   .tadafy__ico-0510 {
     transform: scale(.7);
   }

@@ -101,7 +101,7 @@ body {
   transform: rotate(-45deg);
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 240px) {
   .tadafy__ico-0340 {
     transform: scale(.7)translate(0);
   }
