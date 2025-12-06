@@ -159,3 +159,9 @@ body {
   display: block;
   position: relative;
 }
+
+@media screen and (max-width: 340px) {
+  .btn__tgl-0050-1__checkboxwrap {
+    transform: scale(.7);
+  }
+}

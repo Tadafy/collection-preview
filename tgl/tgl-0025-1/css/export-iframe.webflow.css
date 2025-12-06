@@ -209,7 +209,7 @@ body {
   transform: rotateX(120deg)rotateY(0)rotateZ(0);
 }
 
-@media screen and (max-width: 240px) {
+@media screen and (max-width: 340px) {
   .btn__tgl-0025-1__checkboxwrap {
     transform: scale(.7);
   }
