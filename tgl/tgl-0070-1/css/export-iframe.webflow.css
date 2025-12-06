@@ -175,3 +175,9 @@ body {
   display: flex;
   position: relative;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__tgl-0070-1__checkboxwrap {
+    transform: scale(.7);
+  }
+}

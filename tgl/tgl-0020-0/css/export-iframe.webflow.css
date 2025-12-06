@@ -155,6 +155,6 @@ body {
 
 @media screen and (max-width: 240px) {
   .btn__tgl-0020-0__checkboxwrap {
-    transform: scale(.7);
+    transform: scale(.6);
   }
 }
