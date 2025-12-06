@@ -26,3 +26,9 @@ body {
   display: inline-block;
   position: relative;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__txt-0050 {
+    transform: scale(.7);
+  }
+}

@@ -41,3 +41,9 @@ body {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__und-0050 {
+    transform: scale(.7);
+  }
+}

@@ -38,3 +38,9 @@ body {
 .und-0140__label {
   padding-bottom: 15px;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__und-0140 {
+    transform: scale(.7);
+  }
+}

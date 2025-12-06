@@ -44,3 +44,9 @@ body {
 .und-0816__span {
   font-weight: 200;
 }
+
+@media screen and (max-width: 240px) {
+  .tadafy__und-0816 {
+    transform: scale(.7);
+  }
+}

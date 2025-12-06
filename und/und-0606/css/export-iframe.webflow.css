@@ -67,3 +67,9 @@ body {
 .und-0606__span {
   font-weight: 300;
 }
+
+@media screen and (max-width: 240px) {
+  .tadafy__und-0606 {
+    transform: scale(.7);
+  }
+}

@@ -39,3 +39,9 @@ body {
   padding: 30px 50px;
   position: relative;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__sha-0005 {
+    transform: scale(.7);
+  }
+}

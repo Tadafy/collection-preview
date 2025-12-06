@@ -32,3 +32,9 @@ body {
   color: #1877f2;
   padding-bottom: 15px;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__txt-0040 {
+    transform: scale(.7);
+  }
+}

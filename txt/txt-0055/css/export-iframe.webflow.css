@@ -36,3 +36,9 @@ body {
 .txt-0055__label--2nd {
   color: #2bc78a;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__txt-0055 {
+    transform: scale(.7);
+  }
+}

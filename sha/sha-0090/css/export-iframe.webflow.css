@@ -65,3 +65,9 @@ body {
 .sha-0090__big {
   font-size: 50px;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__sha-0090 {
+    transform: scale(.7);
+  }
+}

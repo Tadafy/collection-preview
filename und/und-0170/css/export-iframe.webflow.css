@@ -39,3 +39,9 @@ body {
 .und-0170__label {
   padding-bottom: 7px;
 }
+
+@media screen and (max-width: 240px) {
+  .tadafy__und-0170 {
+    transform: scale(.7);
+  }
+}

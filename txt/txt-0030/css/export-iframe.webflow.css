@@ -33,3 +33,9 @@ body {
   padding-top: 4px;
   padding-bottom: 4px;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__txt-0030 {
+    transform: scale(.7);
+  }
+}

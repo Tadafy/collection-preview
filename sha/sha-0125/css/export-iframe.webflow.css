@@ -120,3 +120,9 @@ body {
   position: absolute;
   inset: 0%;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__sha-0125 {
+    transform: scale(.7);
+  }
+}

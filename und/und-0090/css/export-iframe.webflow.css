@@ -43,3 +43,9 @@ body {
 .und-0090__label {
   padding-bottom: 10px;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__und-0090 {
+    transform: scale(.7);
+  }
+}

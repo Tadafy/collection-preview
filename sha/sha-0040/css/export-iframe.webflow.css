@@ -37,3 +37,9 @@ body {
 .sha-0040__label {
   padding: 20px 45px;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__sha-0040 {
+    transform: scale(.7);
+  }
+}

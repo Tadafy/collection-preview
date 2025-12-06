@@ -42,3 +42,9 @@ body {
   color: #fffc;
   text-shadow: 0 0 5px #fff, 0 0 15px #fff;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__sha-0055 {
+    transform: scale(.7);
+  }
+}

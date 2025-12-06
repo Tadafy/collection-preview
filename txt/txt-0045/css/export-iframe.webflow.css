@@ -44,3 +44,9 @@ body {
 .txt-0045__label--3rd {
   color: red;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__txt-0045 {
+    transform: scale(.7);
+  }
+}

@@ -42,3 +42,9 @@ body {
   color: #2bc78a;
   position: absolute;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__txt-0060 {
+    transform: scale(.7);
+  }
+}

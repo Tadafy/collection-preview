@@ -43,3 +43,9 @@ body {
   padding-bottom: 30px;
   position: relative;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__und-0150 {
+    transform: scale(.7);
+  }
+}

@@ -94,3 +94,9 @@ body {
 .btn__sha-0115:hover {
   transform: scale(1.05);
 }
+
+@media screen and (max-width: 240px) {
+  .btn__sha-0115 {
+    transform: scale(.7);
+  }
+}
