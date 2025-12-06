@@ -71,3 +71,9 @@ body {
   position: relative;
   top: -1px;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__3d-0020 {
+    transform: scale(.7);
+  }
+}

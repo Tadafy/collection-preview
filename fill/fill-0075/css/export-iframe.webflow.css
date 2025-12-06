@@ -57,3 +57,9 @@ body {
   padding: 15px 70px;
   position: relative;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__fill-0075 {
+    transform: scale(.7);
+  }
+}

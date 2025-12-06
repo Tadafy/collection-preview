@@ -53,3 +53,9 @@ body {
   display: flex;
   position: relative;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__3d-0085 {
+    transform: scale(.7);
+  }
+}

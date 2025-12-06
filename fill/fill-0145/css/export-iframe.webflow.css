@@ -66,7 +66,7 @@ body {
 
 @media screen and (max-width: 240px) {
   .tadafy__fill-0145 {
-    transform: scale(.7)translate(0);
+    transform: scale(.7);
   }
 }
 

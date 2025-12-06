@@ -55,3 +55,9 @@ body {
   position: absolute;
   inset: 0%;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__fill-0050 {
+    transform: scale(.7);
+  }
+}

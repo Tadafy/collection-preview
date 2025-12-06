@@ -45,3 +45,9 @@ body {
 ._200 {
   font-weight: 200;
 }
+
+@media screen and (max-width: 240px) {
+  .tadafy__fill-0185 {
+    transform: scale(.7);
+  }
+}

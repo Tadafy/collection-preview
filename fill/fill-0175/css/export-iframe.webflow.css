@@ -46,4 +46,8 @@ body {
   }
 }
 
-
+@media screen and (max-width: 240px) {
+  .tadafy__fill-0175 {
+    transform: scale(.7);
+  }
+}

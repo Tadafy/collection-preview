@@ -32,3 +32,9 @@ body {
 .fill-0025__label {
   padding: 10px 65px;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__fill-0025 {
+    transform: scale(.7);
+  }
+}

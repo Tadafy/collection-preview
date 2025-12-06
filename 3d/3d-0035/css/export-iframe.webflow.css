@@ -76,3 +76,9 @@ body {
 ._3d-0035__label--top {
   display: none;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__3d-0035 {
+    transform: scale(.7);
+  }
+}

@@ -59,3 +59,9 @@ body {
   inset: 0%;
   transform: rotateX(0)rotateY(180deg)rotateZ(0);
 }
+
+@media screen and (max-width: 240px) {
+  .btn__3d-0065 {
+    transform: scale(.7);
+  }
+}
