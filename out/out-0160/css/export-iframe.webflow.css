@@ -51,3 +51,9 @@ body {
 .out-0160__label {
   padding: 100px 40px;
 }
+
+@media screen and (max-width: 240px) {
+  .tadafy__out-0160 {
+    transform: scale(.7);
+  }
+}

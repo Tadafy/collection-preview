@@ -63,3 +63,9 @@ body {
   position: relative;
   transform: skew(15deg);
 }
+
+@media screen and (max-width: 240px) {
+  .tadafy__out-0210 {
+    transform: scale(.7);
+  }
+}

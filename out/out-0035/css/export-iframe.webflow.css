@@ -60,3 +60,9 @@ body {
 .out-0035__label {
   padding: 30px 35px;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__out-0035 {
+    transform: scale(.7);
+  }
+}

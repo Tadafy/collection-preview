@@ -81,3 +81,9 @@ body {
   inset: -20px 0% auto;
   overflow: hidden;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__out-0140 {
+    transform: scale(.7);
+  }
+}

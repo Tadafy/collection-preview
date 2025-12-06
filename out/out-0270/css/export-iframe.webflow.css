@@ -64,3 +64,9 @@ body {
   align-items: center;
   display: flex;
 }
+
+@media screen and (max-width: 240px) {
+  .tadafy__out-0270 {
+    transform: scale(.7);
+  }
+}

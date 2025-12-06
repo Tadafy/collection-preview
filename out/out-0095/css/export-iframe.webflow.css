@@ -38,3 +38,9 @@ body {
 .out-0095__label:hover {
   margin: 4px;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__out-0095 {
+    transform: scale(.7);
+  }
+}

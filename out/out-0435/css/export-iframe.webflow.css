@@ -111,3 +111,9 @@ body {
   inset: 0% 0% 0% 50%;
   transform: skew(0deg, -20deg);
 }
+
+@media screen and (max-width: 240px) {
+  .tadafy__out-0435 {
+    transform: scale(.7);
+  }
+}

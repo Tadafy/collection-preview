@@ -37,3 +37,9 @@ body {
 .out-0070__label {
   padding: 20px 45px;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__out-0070 {
+    transform: scale(.7);
+  }
+}

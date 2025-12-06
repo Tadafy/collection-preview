@@ -64,3 +64,9 @@ body {
   left: -4px;
   transform: skew(8deg);
 }
+
+@media screen and (max-width: 240px) {
+  .tadafy__out-0205 {
+    transform: scale(.7);
+  }
+}

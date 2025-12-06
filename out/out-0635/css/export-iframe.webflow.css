@@ -59,3 +59,9 @@ body {
   padding: 28px;
   position: relative;
 }
+
+@media screen and (max-width: 240px) {
+  .tadafy__out-0635 {
+    transform: scale(.7);
+  }
+}

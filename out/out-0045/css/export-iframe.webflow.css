@@ -68,3 +68,9 @@ body {
 .out-0045__label:hover {
   padding: 30px 35px;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__out-0045 {
+    transform: scale(.7);
+  }
+}

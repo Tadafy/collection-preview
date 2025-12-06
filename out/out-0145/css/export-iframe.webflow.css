@@ -87,3 +87,9 @@ body {
 .out-0145__wrap {
   position: relative;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__out-0145 {
+    transform: scale(.7);
+  }
+}

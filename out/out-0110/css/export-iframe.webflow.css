@@ -44,3 +44,9 @@ body {
   border-color: #0000;
   margin: -3px;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__out-0110 {
+    transform: scale(.7);
+  }
+}
