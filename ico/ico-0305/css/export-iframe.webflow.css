@@ -101,6 +101,6 @@ body {
 
 @media screen and (max-width: 240px) {
   .tadafy__ico-0305 {
-    transform: scale(.7)translate(0);
+    transform: scale(.7);
   }
 }

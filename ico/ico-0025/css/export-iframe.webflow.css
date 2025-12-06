@@ -56,3 +56,9 @@ body {
   width: 13px;
   height: 13px;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__ico-0025 {
+    transform: scale(.7);
+  }
+}

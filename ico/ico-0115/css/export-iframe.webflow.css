@@ -140,3 +140,9 @@ body {
   inset: 0%;
   transform: translate(-16px, 16px);
 }
+
+@media screen and (max-width: 240px) {
+  .btn__ico-0115 {
+    transform: scale(.7);
+  }
+}

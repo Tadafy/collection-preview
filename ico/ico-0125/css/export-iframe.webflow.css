@@ -59,3 +59,9 @@ body {
 .ico-0125__bar--top.bar_bott {
   inset: auto auto 0% 0%;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__ico-0125 {
+    transform: scale(.7);
+  }
+}

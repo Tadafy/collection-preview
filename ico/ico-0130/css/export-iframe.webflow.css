@@ -64,3 +64,9 @@ body {
     left: 30px;
   }
 }
+
+@media screen and (max-width: 240px) {
+  .btn__ico-0130 {
+    transform: scale(.7);
+  }
+}

@@ -73,3 +73,9 @@ body {
   padding-right: 25px;
   position: relative;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__ico-0100 {
+    transform: scale(.7);
+  }
+}

@@ -98,3 +98,9 @@ body {
   left: -2px;
   transform: rotate(-45deg);
 }
+
+@media screen and (max-width: 240px) {
+  .btn__ico-0005 {
+    transform: scale(.7);
+  }
+}

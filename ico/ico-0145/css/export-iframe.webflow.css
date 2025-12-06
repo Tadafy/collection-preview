@@ -97,3 +97,9 @@ body {
   display: flex;
   position: relative;
 }
+
+@media screen and (max-width: 240px) {
+  .btn__ico-0145 {
+    transform: scale(.7);
+  }
+}

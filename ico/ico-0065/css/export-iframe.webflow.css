@@ -108,3 +108,9 @@ body {
   inset: auto -1px 1px auto;
   transform: rotate(-45deg);
 }
+
+@media screen and (max-width: 240px) {
+  .btn__ico-0065 {
+    transform: scale(.7);
+  }
+}
