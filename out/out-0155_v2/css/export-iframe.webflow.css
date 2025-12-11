@@ -1,0 +1,70 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 -50%;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__out-0155 {
+  color: #00f;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  flex: none;
+  align-self: center;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.out-0155__wrap {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.out-0155__line--l {
+  flex: none;
+  align-items: stretch;
+  width: 100px;
+  height: 4px;
+  display: flex;
+  position: relative;
+}
+
+.out-0155__line {
+  background-color: #00f;
+  width: 75%;
+}
+
+.out-0155__label {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.out-0155__line--r {
+  flex: none;
+  justify-content: flex-end;
+  width: 100px;
+  height: 4px;
+  display: flex;
+  position: relative;
+}
+
+@media screen and (max-width: 479px) {
+  .tadafy__out-0155 {
+    transform: scale(.7);
+  }
+}
+
+
