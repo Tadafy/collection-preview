@@ -46,21 +46,21 @@ body {
   left: 0%;
 }
 
-.und-0405__line--2 {
-  background-color: #fff;
-  width: 70%;
-  position: absolute;
-  top: 0%;
-  bottom: 0%;
-  right: 0%;
-}
-
 .und-0405__shad {
   background-color: #0003;
   height: 3px;
   position: absolute;
   bottom: 0%;
   left: 0%;
+  right: 0%;
+}
+
+.und-0405__line--2 {
+  background-color: #fff;
+  width: 70%;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
   right: 0%;
 }
 
@@ -76,3 +76,4 @@ body {
     transform: scale(.7);
   }
 }
+
