@@ -1,0 +1,55 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 -50%;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__fill-0520 {
+  color: #000;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 2px solid #000;
+  border-radius: 10px;
+  flex-direction: row;
+  flex: none;
+  justify-content: flex-end;
+  align-self: center;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transform: translate(0);
+}
+
+.fill-0520__fill {
+  background-image: linear-gradient(to top, #1047326b, #ffffff05), repeating-linear-gradient(125deg, #25c285, #25c285 2%, #2bc78a 2% 4%);
+  flex: 1;
+  width: 400%;
+  height: 102%;
+  position: absolute;
+  top: -1%;
+  bottom: 0%;
+  right: 0%;
+}
+
+.fill-0520__label {
+  padding: 35px 60px;
+  position: relative;
+}
+
+@media screen and (max-width: 240px) {
+  .tadafy__fill-0520 {
+    transform: scale(.7);
+  }
+}

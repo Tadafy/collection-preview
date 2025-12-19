@@ -1,0 +1,65 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 -50%;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__fill-0710 {
+  color: #ff4848;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  flex-direction: row;
+  flex: none;
+  justify-content: flex-end;
+  align-self: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.fill-0710__wrap {
+  border-radius: 20px;
+  flex: none;
+  position: absolute;
+  inset: 0%;
+  overflow: hidden;
+}
+
+.fill-0710__wrap-2 {
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300%;
+  margin-top: -10px;
+  display: flex;
+  position: absolute;
+  inset: 0% -1%;
+}
+
+.fill-0710__line {
+  background-color: #ff4848;
+  height: 1px;
+  transform: rotate(10deg);
+}
+
+.fill-0710__label {
+  margin-right: -2px;
+  padding: 11px 25px 10px;
+  position: relative;
+}
+
+@media screen and (max-width: 240px) {
+  .tadafy__fill-0710 {
+    transform: scale(.7);
+  }
+}
