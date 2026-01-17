@@ -1,0 +1,80 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 -50%;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__mrp-0610 {
+  color: #000;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  flex-direction: row;
+  flex: none;
+  justify-content: flex-end;
+  align-self: center;
+  align-items: center;
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.mrp-0610__wrap {
+  flex: none;
+  position: absolute;
+  inset: 0%;
+}
+
+.mrp-0610__fill--4 {
+  transform-origin: 100% 100%;
+  background-color: #00ff1e;
+  margin-left: -1px;
+  position: absolute;
+  inset: 0% 0% 0% 50%;
+  transform: skew(0deg, -10deg);
+}
+
+.mrp-0610__fill--3 {
+  transform-origin: 0 0;
+  background-color: #00ff1e;
+  position: absolute;
+  inset: 0% 50% 0% 0%;
+  transform: skew(0deg, 10deg);
+}
+
+.mrp-0610__fill--2 {
+  transform-origin: 100% 0;
+  background-color: #00ff1e;
+  margin-left: -1px;
+  position: absolute;
+  inset: 0% 0% 0% 50%;
+  transform: skew(0deg, 10deg);
+}
+
+.mrp-0610__fill--1 {
+  transform-origin: 0 100%;
+  background-color: #00ff1e;
+  position: absolute;
+  inset: 0% 50% 0% 0%;
+  transform: skew(0deg, -10deg);
+}
+
+.mrp-0610__label {
+  padding: 6px 40px;
+  position: relative;
+}
+
+@media screen and (max-width: 240px) {
+  .tadafy__mrp-0610 {
+    transform: scale(.7);
+  }
+}

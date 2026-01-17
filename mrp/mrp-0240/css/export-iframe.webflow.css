@@ -1,0 +1,83 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 -50%;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__mrp-0240 {
+  color: #fff;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  flex: none;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.mrp-0240__wrap {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+}
+
+.mrp-0240__slice {
+  background-color: #00e66d;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0%;
+  transform: rotate(22.5deg);
+}
+
+.mrp-0240__slice.lev-02 {
+  opacity: .5;
+}
+
+.mrp-0240__slice.lev-02.lev-03 {
+  display: block;
+}
+
+.mrp-0240__fill {
+  background-color: #2a3239;
+  justify-content: center;
+  align-items: center;
+  margin: -.5px;
+  position: absolute;
+  inset: 0%;
+}
+
+.mrp-0240__label-w {
+  aspect-ratio: 1;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.mrp-0240__label {
+  flex: none;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@media screen and (max-width: 240px) {
+  .tadafy__mrp-0240 {
+    transform: scale(.7);
+  }
+}

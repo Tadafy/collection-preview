@@ -1,0 +1,74 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 -50%;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__mrp-0275 {
+  color: #2a3239;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  flex-direction: row;
+  flex: none;
+  justify-content: flex-end;
+  align-self: center;
+  align-items: center;
+  padding: 10px 40px;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.mrp-0275__segm-w {
+  flex: none;
+  position: absolute;
+  inset: 0%;
+}
+
+.mrp-0275__segm--1 {
+  background-color: #2a3239;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.mrp-0275__segm--1.lev--2 {
+  background-color: #00ff1e;
+  transform: rotate(10deg);
+}
+
+.mrp-0275__segm--2 {
+  background-color: #2a3239;
+  border-top-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.mrp-0275__segm--2.lev--2 {
+  background-color: #00ff1e;
+  transform: rotate(10deg);
+}
+
+.mrp-0275__label {
+  padding: 33px 15px;
+  position: relative;
+  transform: skew(0deg);
+}
+
+@media screen and (max-width: 240px) {
+  .tadafy__mrp-0275 {
+    transform: scale(.7);
+  }
+}

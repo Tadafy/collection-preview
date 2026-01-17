@@ -1,0 +1,58 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 -50%;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__mrp-0505 {
+  color: #fafafa;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  flex-direction: row;
+  flex: none;
+  justify-content: flex-end;
+  align-self: center;
+  align-items: center;
+  font-family: Changa One, Impact, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.mrp-0505__wrap {
+  flex: none;
+  position: absolute;
+  inset: 0%;
+}
+
+.mrp-0505__fill--1 {
+  background-image: linear-gradient(270deg, #c0a873, #bfa77203);
+  position: absolute;
+  inset: 0% 50% 0% 0%;
+  transform: skew(0deg, -10deg);
+}
+
+.mrp-0505__fill--1.fill--2 {
+  left: 50%;
+  right: 0%;
+}
+
+.mrp-0505__label {
+  padding: 21px 45px;
+  position: relative;
+}
+
+@media screen and (max-width: 240px) {
+  .tadafy__mrp-0505 {
+    transform: scale(.7);
+  }
+}

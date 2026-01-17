@@ -1,0 +1,63 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 -50%;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__mrp-0320 {
+  color: #111;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  flex-direction: row;
+  flex: none;
+  justify-content: flex-end;
+  align-self: center;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.mrp-0320__circ-w {
+  flex: none;
+  position: absolute;
+  inset: 0%;
+}
+
+.mrp-0320__circ--2 {
+  background-color: #0ff;
+  border-radius: 49%;
+  position: absolute;
+  inset: 0;
+}
+
+.mrp-0320__circ--1 {
+  mix-blend-mode: screen;
+  background-color: red;
+  border-radius: 49%;
+  position: absolute;
+  inset: 0;
+}
+
+.mrp-0320__label {
+  padding: 25px 30px;
+  position: relative;
+}
+
+@media screen and (max-width: 240px) {
+  .tadafy__mrp-0320 {
+    transform: scale(.7);
+  }
+}
