@@ -1,0 +1,84 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 -50%;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__sha-0355 {
+  color: #fff;
+  text-align: center;
+  letter-spacing: 3px;
+  flex: none;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-family: Inconsolata, monospace;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.sha-0355__wrap {
+  justify-content: center;
+  align-items: center;
+}
+
+.sha-0355__segm {
+  transform-origin: 0 100%;
+  background-color: #ff001e;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5%;
+  position: absolute;
+  inset: 0%;
+  transform: skew(-5deg)rotate(-5deg);
+}
+
+.sha-0355__segm.lev-02 {
+  background-color: #fff200;
+  margin-right: 10%;
+  transform: skew(-10deg)rotate(-10deg);
+}
+
+.sha-0355__segm.lev-02.lev-03 {
+  z-index: 10;
+  background-color: #fff;
+  margin-right: 15%;
+  display: none;
+  transform: skew(-15deg)rotate(-15deg);
+}
+
+.sha-0355__fill {
+  background-color: #00e66d;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0%;
+}
+
+.sha-0355__label-w {
+  transform-origin: 0 100%;
+  background-color: #2a3239;
+  margin-right: 15%;
+  position: relative;
+}
+
+.sha-0355__label {
+  margin-left: -8%;
+  padding: 32px 22px 32px 24px;
+  position: relative;
+}
+
+@media screen and (max-width: 240px) {
+  .tadafy__sha-0355 {
+    transform: scale(.7);
+  }
+}

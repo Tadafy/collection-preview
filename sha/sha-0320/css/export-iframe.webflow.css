@@ -1,0 +1,54 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 -50%;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__sha-0320 {
+  color: #222;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  flex: none;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.4;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.sha-0320__segm {
+  transform-origin: 100% 100%;
+  transform-style: preserve-3d;
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+  margin-left: -10px;
+  position: absolute;
+  inset: 0% 5% 0% 0%;
+  transform: scale3d(1, .75, 1)skew(10deg);
+}
+
+.sha-0320__label {
+  transform-origin: 0 100%;
+  background-color: #fd41de;
+  padding: 8px 24px;
+  position: relative;
+}
+
+@media screen and (max-width: 240px) {
+  .tadafy__sha-0320 {
+    transform: scale(.7);
+  }
+}
+
