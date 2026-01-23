@@ -1,0 +1,83 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 -50%;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__txt-0310 {
+  color: #000;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background-color: #fff;
+  flex: none;
+  align-self: center;
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transform: skew(0deg, -12deg);
+}
+
+.txt-0310__label-w {
+  transform-origin: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+  transform: skew(0deg, 12deg);
+}
+
+.txt-0310__label {
+  padding: 23px 10px;
+  position: relative;
+}
+
+.txt-0310__label-w-2nd {
+  transform-origin: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  transform: skew(0deg, 12deg);
+}
+
+.txt-0310__bott-w {
+  height: 50%;
+  margin-left: -1px;
+  margin-right: -1px;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  overflow: hidden;
+  transform: skew(0deg, -12deg);
+}
+
+.txt-0310__bott {
+  transform-origin: 100%;
+  background-color: #000;
+  height: 200%;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  transform: translate(0, 100%)skew(0deg, 12deg);
+}
+
+@media screen and (max-width: 240px) {
+  .tadafy__txt-0310 {
+    transform: scale(.7) skew(0deg, -12deg);
+  }
+}
+

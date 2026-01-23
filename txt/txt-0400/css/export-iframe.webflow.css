@@ -1,0 +1,68 @@
+body {
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 -50%;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.tadafy__txt-0400 {
+  color: #00f;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: none;
+  border: 1px solid #00f;
+  border-radius: 5px;
+  flex: none;
+  align-self: center;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1;
+  text-decoration: none;
+  transition: all .5s;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transform: rotate(.01deg);
+}
+
+.tadafy__txt-0400:hover {
+  border-color: #00f0;
+}
+
+.txt-0400__label-w-2nd {
+  z-index: 1;
+  transform-origin: 0%;
+  color: #fff;
+  background-color: #00f;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.txt-0400__label-2 {
+  padding: 12px 45px;
+  display: flex;
+  position: relative;
+}
+
+.txt-0400__label-w {
+  transform-origin: 0%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  inset: 0%;
+}
+
+@media screen and (max-width: 240px) {
+  .tadafy__txt-0400 {
+    transform: scale(.7);
+  }
+}
+
